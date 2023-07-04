@@ -3,7 +3,7 @@ function moviestheater() {
     fetch("http://localhost:3000/films")
     .then((res) => res.json())
     .then((arts) => {
-        // Get the HTML element with id "films"
+        // Get the HTML element with id "films" under ul element
         const flatdango = document.getElementById("films");
 
         // Iterate over each movie
