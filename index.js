@@ -1,5 +1,5 @@
 function moviestheater() {
-    // Fetch movie data from the specified URL
+    // Fetch movie data from the specified URL an api
     fetch("http://localhost:3000/films")
     .then((res) => res.json())
     .then((arts) => {
