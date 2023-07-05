@@ -59,6 +59,26 @@ let availableTickets = availability - ticketsPurchased;
 // Get the HTML element with id "availableTickets"
 const availableTicketsElement = document.querySelector("#availableTickets");
 
-// Set the text content of the "availableTickets" element to the calculated available tickets
-// availableTicketsElement.textContent = `Available Tickets: ${availableTickets}`;
+// Get the HTML element with id "buyTickets"
+const ticketButton = document.querySelector("#buyTickets");
 
+// Check if there are available tickets
+if (availableTickets > 0) {
+    // Update the text content of the "availableTicketsElement" with the available tickets count
+    availableTicketsElement.textContent = `Available Tickets: ${availableTickets}`;
+
+    // Update the text content of the "ticketButton" to indicate buying tickets
+    ticketButton.textContent = "Buy Tickets";
+
+    // Enable the ticket button
+    ticketButton.disabled = false;
+} else {
+    // Update the text content of the "availableTicketsElement" to indicate that tickets are sold out
+    availableTicketsElement.textContent = "SOLD OUT";
+
+    // Update the text content of the "ticketButton" to indicate that tickets are sold out
+    ticketButton.textContent = "Sold Out";
+
+    // Disable the ticket button
+    ticketButton.disabled = true;
+}
