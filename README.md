@@ -1,6 +1,6 @@
 # movie app
 
-This website allows to easy onboarding of sellers to watermelon marketplace
+This website allows people to buy movie tickets and show when sold out
 
 ## Table of Content
 Description
