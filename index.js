@@ -1,4 +1,4 @@
-function moviestheater() {
+function moviesTheater() {
     // Fetch movie data from the specified URL an api
     fetch("http://localhost:3000/films")
     .then((res) => res.json())
@@ -81,4 +81,32 @@ if (availableTickets > 0) {
 
     // Disable the ticket button
     ticketButton.disabled = true;
+}
+// Add a click event listener to the ticketButton
+ticketButton.addEventListener("click", (am) => {
+    // Prevent the default behavior of the click event
+    am.preventDefault();
+
+    // Check if there are available tickets
+    if (availableTickets > 0) {
+        // Decrement the availableTickets count
+        availableTickets--;
+
+        // Update the text content of the "availableTicketsElement" with the updated available tickets count
+        availableTicketsElement.textContent = `Available Tickets: ${availableTickets}`;
+
+        // Check if the availableTickets count reaches 0
+        if (availableTickets === 0) {
+            // Update the text content of the "ticketButton" to indicate "Sold Out"
+            ticketButton.textContent = "Sold Out";
+
+            // Disable the ticket button
+            ticketButton.disabled = true;
+        }
+    }
+});
+// Define the init function
+function init() {
+    // Call the moviesTheater function
+    moviesTheater();
 }
