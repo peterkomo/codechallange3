@@ -10,3 +10,7 @@ body {
     padding: 10px;
     text-align: center;
   }
+  #films {
+    list-style: none;
+    padding: 0;
+  }
