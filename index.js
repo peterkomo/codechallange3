@@ -47,4 +47,18 @@ function displayMovieDetails(movie) {
     // Set the text content of the "description" element to the movie's description
     document.querySelector("#description").textContent = movie.description;
 }
+// Get the capacity of the movie theater
+const availability = movie.capacity;
+
+// Get the number of tickets already purchased for the movie
+const ticketsPurchased = movie.tickets_sold;
+
+// Calculate the number of available tickets for the movie
+let availableTickets = availability - ticketsPurchased;
+
+// Get the HTML element with id "availableTickets"
+const availableTicketsElement = document.querySelector("#availableTickets");
+
+// Set the text content of the "availableTickets" element to the calculated available tickets
+// availableTicketsElement.textContent = `Available Tickets: ${availableTickets}`;
 
