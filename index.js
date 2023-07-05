@@ -31,3 +31,20 @@ function moviestheater() {
         });
     });
 }
+function displayMovieDetails(movie) {
+    // Set the source of the "poster" image element to the movie's poster URL
+    document.querySelector("#poster").src = movie.poster;
+
+    // Set the text content of the "title" element to the movie's title
+    document.querySelector("#title").textContent = movie.title;
+
+    // Set the text content of the "runtime" element to the movie's runtime in minutes
+    document.querySelector("#runtime").textContent = `Runtime: ${movie.runtime}min`;
+
+    // Set the text content of the "showtime" element to the movie's showtime
+    document.querySelector("#showtime").textContent = `Showtime: ${movie.showtime}`;
+
+    // Set the text content of the "description" element to the movie's description
+    document.querySelector("#description").textContent = movie.description;
+}
+
