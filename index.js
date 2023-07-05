@@ -105,8 +105,10 @@ ticketButton.addEventListener("click", (am) => {
         }
     }
 });
-// Define the init function
+// Defined  the init function
 function init() {
     // Call the moviesTheater function
     moviesTheater();
 }
+// Added a DOMContentLoaded event listener to the document
+document.addEventListener("DOMContentLoaded", init);
